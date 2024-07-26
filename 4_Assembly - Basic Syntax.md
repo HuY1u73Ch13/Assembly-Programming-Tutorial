@@ -87,9 +87,12 @@ Gọi hàm hệ thống để thực thi lệnh sys_write.
 Gọi hàm hệ thống để thực hiện lệnh sys_exit.
 ## Để chạy Assembly trong NASM chúng làm theo các bước sau : 
 * Mở Terminal trên máy ảo Linux chúng ta có thể dùng 2 trình soạn thảo nano && vim để code vd với nano : `nano hello.asm`
-* Để biên dịch chương trình, hãy nhập `nasm -f elf hello.asm`
+* Để biên dịch chương trình, hãy nhập `nasm -f elf hello.asm`. Cú pháp `-f elf` NASM sẽ tạo ra một tệp đối tượng có định dạng tệp ELF.
 * Nếu có bất kỳ lỗi nào, **bạn sẽ được nhắc về lỗi đó ở giai đoạn này**. Nếu không, một tệp đối tượng của chương trình của bạn có tên `hello.o` sẽ được tạo.
 * Để liên kết tệp đối tượng và tạo tệp thực thi có tên hello, hãy nhập `ld -m elf_i386 -s -o hello hello.o`
+<pre> - `ld` : Đây là tên của trình liên kết (linker). ld là công cụ dùng để liên kết các tệp đối tượng và thư viện để tạo ra một tệp thực thi.
+- `-m elf_i386` : Tùy chọn này chỉ định định dạng tệp đầu vào và đầu ra. elf_i386 cho biết rằng tệp đối tượng đầu vào và đầu ra sẽ sử dụng định dạng ELF cho kiến trúc x86 32-bit. Điều này quan trọng nếu bạn đang làm việc với mã Assembly 32-bit và muốn tạo ra một tệp thực thi 32-bit.
+- `-s` : Tùy chọn này yêu cầu ld loại bỏ thông tin gỡ lỗi khỏi tệp thực thi đầu ra, làm giảm kích thước tệp. Đây là lựa chọn tùy chọn để làm cho tệp thực thi nhỏ hơn và không chứa thông tin gỡ lỗi không cần thiết. </pre>
 * Thực hiện chương trình bằng cách gõ `./hello`
 
 
