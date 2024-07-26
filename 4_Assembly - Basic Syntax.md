@@ -86,7 +86,7 @@ Gọi hàm hệ thống để thực thi lệnh sys_write.
 * int 0x80:
 Gọi hàm hệ thống để thực hiện lệnh sys_exit.
 ## Để chạy Assembly trong NASM chúng làm theo các bước sau : 
-* Mở Terminal trên máy ảo Linux lưu dưới dạng `hello.asm`
+* Mở Terminal trên máy ảo Linux chúng ta có thể dùng 2 trình soạn thảo nano && vim để code vd với nano : `nano hello.asm`
 * Để biên dịch chương trình, hãy nhập `nasm -f elf hello.asm`
 * Nếu có bất kỳ lỗi nào, **bạn sẽ được nhắc về lỗi đó ở giai đoạn này**. Nếu không, một tệp đối tượng của chương trình của bạn có tên `hello.o` sẽ được tạo.
 * Để liên kết tệp đối tượng và tạo tệp thực thi có tên hello, hãy nhập `ld -m elf_i386 -s -o hello hello.o`
