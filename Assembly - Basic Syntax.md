@@ -48,7 +48,7 @@ section .text
 
 _start:
     ; Ghi "Hello, world!" ra màn hình
-    mov eax, 1            ; syscall số 4 (sys_write)
+    mov eax, 4            ; syscall số 4 (sys_write)
     mov ebx, 1            ; file descriptor 1 (stdout)
     mov ecx, hello        ; địa chỉ của chuỗi "Hello, world!"
     mov edx, 14           ; số byte của chuỗi (14 bao gồm ký tự xuống dòng)
